@@ -281,7 +281,11 @@ document.addEventListener("keypress", (e) => {
   }
 });
 
-window.addEventListener('touchstart',gameHandler);
+if ("ontouchstart" in window) {
+  window.addEventListener("touchstart", gameHandler);
+} else {
+  document.addEventListener("click", gameHandler);
+}
 
 let gameBored = new bored();
 let bg = new painting(0, 0, 275, 226, 0, canvas.height - 226, true);
