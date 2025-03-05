@@ -255,6 +255,7 @@ function gameHandler() {
   switch (state.current) {
     case state.getReady:
       START.play()
+      bird.flap()
       state.current = state.game;
       break;
     case state.game:
