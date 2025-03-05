@@ -125,6 +125,14 @@ class birdAnimate {
       this.y = canvas.height - fg.h - this.h / 2;
       this.sY = 139;
     }
+    if ( this.y + this.h / 2 <= 0) {
+      if (state.current != state.over) {
+        DIE.play()
+      }
+      state.current = state.over;
+      this.speed = 0;
+      pipe.dx = 0
+    }
     this.draw();
   }
   flap() {
@@ -261,6 +269,7 @@ function gameHandler() {
     case state.game:
       FLAP.play()
       bird.flap();
+      pipe.dx = 2;
       break;
     default:
       bird.x = 50
