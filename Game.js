@@ -275,16 +275,13 @@ function gameHandler() {
   }
 }
 
-document.addEventListener("click", gameHandler);
 document.addEventListener("keypress", (e) => {
   if (e.key == " ") {
     gameHandler();
   }
 });
 
-window.addEventListener('touchstart', ()=>{
-  gameHandler()
-})
+window.addEventListener('touchstart',gameHandler);
 
 let gameBored = new bored();
 let bg = new painting(0, 0, 275, 226, 0, canvas.height - 226, true);
