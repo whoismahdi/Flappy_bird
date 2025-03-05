@@ -263,6 +263,8 @@ function gameHandler() {
       bird.flap();
       break;
     default:
+      bird.x = 50
+      bird.y = 150
       pipe.position = [];
       frames = 0;
       bird.rotate = 0;
