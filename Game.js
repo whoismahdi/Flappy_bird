@@ -279,6 +279,10 @@ document.addEventListener("keypress", (e) => {
   }
 });
 
+window.addEventListener('touchend', ()=>{
+  gameHandler()
+})
+
 let gameBored = new bored();
 let bg = new painting(0, 0, 275, 226, 0, canvas.height - 226, true);
 let fg = new painting(276, 0, 224, 112, 0, canvas.height - 112, true);
