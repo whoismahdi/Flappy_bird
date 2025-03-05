@@ -84,7 +84,7 @@ class birdAnimate {
     this.y = y || 0;
     this.draw();
     this.speed = 0;
-    this.g = 0.1;
+    this.g = 0.25;
     this.rotate = 0;
   }
   draw() {
@@ -128,7 +128,7 @@ class birdAnimate {
     this.draw();
   }
   flap() {
-    this.speed = -2.5
+    this.speed = -4.6
   }
 }
 
