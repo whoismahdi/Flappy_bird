@@ -280,7 +280,7 @@ document.addEventListener("keypress", (e) => {
   }
 });
 
-window.addEventListener('touchend', ()=>{
+window.addEventListener('touchstart', ()=>{
   gameHandler()
 })
 
