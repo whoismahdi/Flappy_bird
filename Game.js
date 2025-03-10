@@ -299,6 +299,9 @@ let fg = new painting(276, 0, 224, 112, 0, canvas.height - 112, true);
 let bird = new birdAnimate(276, 112, 34, 26, 50, 150);
 let getReady = new painting(0,228,173,152,canvas.width / 2 - 173 / 2,80,false);
 let gameOver = new painting(175,228,225,202,canvas.width / 2 - 225 / 2,93,false);
+let whiteMedal = new painting(311,112,45,44,70,180,false);
+let goldMedal = new painting(311,158,45,44,70,180,false);
+let bronzeMedal = new painting(360,158,45,44,70,180,false);
 let pipe = new pipes();
 let score = new scores()
 animate();
@@ -313,6 +316,15 @@ function animate() {
   }
   if (state.current == state.over) {
     gameOver.update(false);
+    if (score.now >= 10 && score.now < 20) {
+      bronzeMedal.update()
+    }
+    if (score.now >= 20 && score.now < 30) {
+      goldMedal.update()
+    }
+    if (score.now >= 30) {
+      whiteMedal.update()
+    }
   }
   if (state.current == state.game) {
     fg.x = (fg.x - 2) % (fg.w / 2);
